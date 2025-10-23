@@ -198,3 +198,9 @@ body.tutoring .tutoring-figure figcaption {
         text-align: center; /* optional for readability */
     }
 }
+body.tutoring .tutoring-figure figcaption {
+    text-align: center; /* always center the caption */
+    font-size: 0.85rem; /* smaller than body text */
+    color: #555; /* subtle gray */
+    margin-top: 5px; /* spacing above caption */
+}
