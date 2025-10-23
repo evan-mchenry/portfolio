@@ -13,7 +13,6 @@
     <link rel="manifest" href="/site.webmanifest" />
 
     <style>
-        /* Page-specific adjustments; uses your site's base CSS */
         body.tutoring {
             max-width: 800px;
             margin: 0 auto;
@@ -27,32 +26,26 @@
             gap: 2rem;
         }
 
-        .tutoring-figure {
-            margin: 0;
-            width: 100%;
+        /* New flex wrapper for image + intro */
+        .intro-section {
+            display: flex;
+            gap: 1.5rem;
+            align-items: flex-start;
         }
 
-            .tutoring-figure img {
-                width: 250px; /* makes it smaller */
-                height: 250px; /* makes it square */
-                object-fit: cover; /* keeps proportions, crops neatly */
-                border-radius: 0px; /* optional: gives soft rounded corners */
-                float: left;
-                margin: 0 1.5rem 1rem 0;
+            .intro-section img {
+                width: 250px;
+                height: 250px;
+                object-fit: cover;
+                border-radius: 0px;
             }
 
-
-        .tutoring-text ul {
-            margin-left: 1.2rem;
-        }
-
-        .tutoring-text p,
-        .tutoring-text li {
+        .intro-text p {
             line-height: 1.6;
+            margin-bottom: 1rem;
         }
 
-        .tutoring-text h2,
-        .tutoring-text h3 {
+        h2, h3 {
             margin-top: 1.5rem;
         }
 
@@ -62,21 +55,35 @@
             margin-top: 1.5rem;
         }
 
+        /* Responsive adjustments */
         @media (max-width: 700px) {
-            .tutoring-figure img {
-                float: none;
-                margin: 0 auto 1rem auto;
-                display: block;
+            .intro-section {
+                flex-direction: column;
+                align-items: center;
+            }
+
+                .intro-section img {
+                    margin-bottom: 1rem;
+                }
+
+            .intro-text {
+                text-align: center;
             }
         }
 
         nav {
             display: flex;
-            justify-content: center; /* just centers the links horizontally */
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 2rem;
         }
 
-
-
+            nav a {
+                text-decoration: none;
+                font-weight: bold; /* preserve bold links */
+                color: #000;
+            }
     </style>
 </head>
 
@@ -91,33 +98,28 @@
     </nav>
 
     <h1 style="text-align: center;"><mark>Tutoring</mark></h1>
-   <!-- <br /> -->
-    <div class="about-container">
+
+    <!-- Intro section with image and text side by side -->
+    <div class="intro-section">
+        <!--<img src="IMG_9395.jpg" alt="Evan McHenry tutoring">-->
         <figure class="tutoring-figure">
-            <img src="IMG_9395.jpg" alt="Evan McHenry tutoring">
+            <img src="IMG_9395.jpg" alt="Evan McHenry tutoring" width="250" height="250">
+            <figcaption>If you don't believe my credentials, here I am sitting in front of an academic-looking brick building.</figcaption>
         </figure>
 
         <div class="intro-text">
-
-
             <p>From directing my high school’s writing center to teaching at Choate Rosemary Hall, I’ve always been committed to helping students excel.</p>
 
-            <p>
-                I graduated <em>Phi Beta Kappa</em> from Brown University with degrees in English and Literary Arts. My essays have won the Preston Gurney Fiction Prize and the Preston Gurney Poetry Prize at Brown, and I was selected as the Regional Winner in Literature for the U.S. and Canada in the Global Undergraduate Awards. My creative writing has been published in <em>The Onion</em>.
-            
-            <p>
-                I have experience working with multiple highly rated tutoring companies and now provide tutoring and editing services to students seeking independent support.
+            <p>I graduated <em>Phi Beta Kappa</em> from Brown University with degrees in English and Literary Arts. My essays have won the Preston Gurney Fiction Prize and the Preston Gurney Poetry Prize at Brown, and I was selected as the Regional Winner in Literature for the U.S. and Canada in the Global Undergraduate Awards. My creative writing has been published in <em>The Onion</em>.</p>
 
-            </p>
+            <p>I have experience working with multiple highly rated tutoring companies and now provide tutoring and editing services to students seeking independent support.</p>
         </div>
     </div>
 
     <h2 style="text-align: center;">Areas of Specialization</h2>
 
     <h3>Admissions</h3>
-    <p>
-        Whether it’s improving SAT scores by 200 points, writing standout admissions essays, or crafting a strong profile for highly selective schools, I have experience providing support for all stages of the admissions process, from the preliminary search to the final deadlines.
-    </p>
+    <p>Whether it’s improving SAT scores by 200 points, writing standout admissions essays, or crafting a strong profile for highly selective schools, I have experience providing support for all stages of the admissions process, from the preliminary search to the final deadlines.</p>
     <ul>
         <li>College Admissions Essays</li>
         <li>College Profile Consulting</li>
@@ -127,9 +129,7 @@
     </ul>
 
     <h3>Subject Support</h3>
-    <p>
-        I work with students to develop the reading, writing, and critical thinking skills that lead to lasting academic confidence and authenticity, especially in a world of AI-generated flatness.
-    </p>
+    <p>I work with students to develop the reading, writing, and critical thinking skills that lead to lasting academic confidence and authenticity, especially in a world of AI-generated flatness.</p>
     <ul>
         <li>General ELA</li>
         <li>AP English, AP History, AP Latin</li>
@@ -137,19 +137,11 @@
         <li>Journalism</li>
     </ul>
 
-    <p>
-        Generally, I work with students in grades 6–12 and in college, though I occasionally take clients at other points in their academic journeys. I offer sessions in-person in the New York City area and virtually.
-    </p>
+    <p>Generally, I work with students in grades 6–12 and in college, though I occasionally take clients at other points in their academic journeys. I offer sessions in-person in the New York City area and virtually.</p>
 
-    <p>
-        <strong>Contact me for a free consultation:</strong> <a href="mailto:evan.m.mchenry@gmail.com">evan.m.mchenry@gmail.com</a>
-    </p>
+    <p><strong>Contact me for a free consultation:</strong> <a href="mailto:evan.m.mchenry@gmail.com">evan.m.mchenry@gmail.com</a></p>
 
-    <p class="disclaimer">
-        <!--<strong>Disclaimer:</strong> -->*This tutoring practice operates independently and is not affiliated with or endorsed by any organization or company with which I am or have been professionally associated. All students engaging my services do so independently, and I do not solicit or accept clients from any current or former employers. My work and client relationships are conducted entirely separately from any company I have worked with.
-    </p>
-
-
+    <p class="disclaimer">*This tutoring practice operates independently and is not affiliated with or endorsed by any organization or company with which I am or have been professionally associated. All students engaging my services do so independently, and I do not solicit or accept clients from any current or former employers. My work and client relationships are conducted entirely separately from any company I have worked with.</p>
 
 </body>
 </html>

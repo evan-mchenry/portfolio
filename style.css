@@ -127,3 +127,73 @@ img {
     max-width: 100%;
     height: auto;
 }
+/* Nav container layout only */
+nav {
+    display: flex;
+    justify-content: center; /* centers links horizontally on desktop */
+    flex-wrap: wrap; /* allows wrapping on small screens */
+    gap: 20px; /* spacing between links */
+    padding: 0;
+    margin: 0;
+}
+
+    /* Keep your original link styles */
+    nav a {
+        /* only add properties you want to preserve */
+        text-decoration: none; /* keeps links clean */
+        /* remove font-weight or color changes if they are already set elsewhere */
+        padding: 8px 12px;
+    }
+
+/* ------------------ */
+/* TUTORING PAGE STYLES */
+/* ------------------ */
+
+/* Container for image + text */
+.tutoring-section {
+    display: flex;
+    gap: 10px; /* controls space between image and text */
+    align-items: flex-start;
+}
+
+/* Tutoring image */
+body.tutoring .tutoring-figure img {
+    width: 250px;       /* desktop fixed width */
+    height: 250px;      /* desktop fixed height */
+    object-fit: cover;  /* crop if needed */
+    flex-shrink: 0;     /* prevent shrinking in flex */
+    /* margin-right: 0.5rem; */
+    max-width: none;    /* override global img max-width to prevent skinny image */
+}
+
+/* Tutoring caption */
+body.tutoring .tutoring-figure figcaption {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Tutoring text next to image */
+.tutoring-text {
+    /*flex: 1; /* take remaining space */
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 700px) {
+    .tutoring-section {
+        flex-direction: column; /* stack image above text */
+        align-items: center; /* center image and text */
+    }
+
+    body.tutoring .tutoring-figure img {
+        width: 200px; /* slightly smaller square on mobile */
+        height: 200px;
+        margin-right: 0; /* remove desktop spacing */
+        margin-bottom: 1rem; /* spacing below image */
+    }
+
+    .tutoring-text {
+        text-align: center; /* improve readability on mobile */
+    }
+}
