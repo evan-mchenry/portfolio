@@ -179,21 +179,22 @@ body.tutoring .tutoring-figure figcaption {
     /*flex: 1; /* take remaining space */
 }
 
-/* Mobile responsive adjustments */
+
 @media (max-width: 700px) {
     .tutoring-section {
         flex-direction: column; /* stack image above text */
         align-items: center; /* center image and text */
+        gap: 1rem; /* spacing between image and text */
     }
 
     body.tutoring .tutoring-figure img {
-        width: 200px; /* slightly smaller square on mobile */
+        width: 200px; /* slightly smaller square */
         height: 200px;
-        margin-right: 0; /* remove desktop spacing */
-        margin-bottom: 1rem; /* spacing below image */
+        margin: 0 auto 1rem; /* center the image and add spacing below */
+        object-fit: cover;
     }
 
     .tutoring-text {
-        text-align: center; /* improve readability on mobile */
+        text-align: center; /* optional for readability */
     }
 }
