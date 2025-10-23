@@ -156,6 +156,13 @@ nav {
     align-items: flex-start;
 }
 
+body.tutoring .tutoring-figure {
+    display: flex;
+    flex-direction: column; /* stack image above caption */
+    align-items: center; /* center image and caption horizontally */
+    margin: 0; /* remove any default margins */
+}
+
 /* Tutoring image */
 body.tutoring .tutoring-figure img {
     width: 250px;       /* desktop fixed width */
