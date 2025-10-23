@@ -187,20 +187,28 @@ body.tutoring .tutoring-figure figcaption {
         gap: 1rem; /* spacing between image and text */
     }
 
-    body.tutoring .tutoring-figure img {
-        width: 200px; /* slightly smaller square */
-        height: 200px;
-        margin: 0 auto 1rem; /* center the image and add spacing below */
-        object-fit: cover;
+    body.tutoring .tutoring-figure {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* center everything inside the figure */
+        margin: 0; /* remove any leftover margins */
     }
 
+        body.tutoring .tutoring-figure img {
+            width: 200px; /* slightly smaller square */
+            height: 200px;
+            object-fit: cover;
+            margin: 0; /* no extra left/right margins */
+        }
+
+        body.tutoring .tutoring-figure figcaption {
+            text-align: center;
+            font-size: 0.85rem;
+            color: #555;
+            margin-top: 5px;
+        }
+
     .tutoring-text {
-        text-align: center; /* optional for readability */
+        text-align: center; /* text below image is centered */
     }
-}
-body.tutoring .tutoring-figure figcaption {
-    text-align: center; /* always center the caption */
-    font-size: 0.85rem; /* smaller than body text */
-    color: #555; /* subtle gray */
-    margin-top: 5px; /* spacing above caption */
 }
